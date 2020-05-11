@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+
+<!--    stylesheet information-->
+    <div th:fragment="head">
+        <meta charset="UTF-8" />
+<!--        <link th:href="@{/bootstrap.css}" rel="stylesheet">-->
+        <link th:href="@{/style.css}" rel="stylesheet">
+    <link th:href="@{/css/bootstrap-3.4.1-dist/css/bootstrap.css}" rel="stylesheet">
+    </div>
+
+</head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-default">
+    <!-- awesome navbar goes here -->
+    <ul class="nav navbar-nav">
+        <li><a class="nav-item" href="/home">Home</a> </li>
+        <li> <a class="nav-item" href="/hello/Fortuna">Hello</a></li>
+        <li><a class="nav-item" href="/join">Join</a></li>
+        <li><a class="nav-item" href="/welcome">join</a></li>
+    </ul>
+</nav>
+<standard_scripts th:fragment="footer">
+    <script th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+</standard_scripts>
+</body>
+</html>

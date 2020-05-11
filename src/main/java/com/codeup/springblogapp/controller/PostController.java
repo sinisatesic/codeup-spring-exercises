@@ -1,4 +1,4 @@
-package com.codeup.springblogapp;
+package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,7 @@ public class PostController {
 
     @GetMapping("/posts/{id}")
     @ResponseBody
-    public String viewIndividualPost(@PathVariable int id){
+    public String viewIndividualPost(@PathVariable long id){
         return "view an individual post at id: " + id;
     }
 
@@ -24,15 +24,15 @@ public class PostController {
         return "view the form for creating a post";
     }
 
-    @RequestMapping(path = "/posts/create", method = RequestMethod.POST)
-    public void postingPost(){
-        //posting stuff
-    }
-
-//    @PostMapping("/posts/create")
-//    @ResponseBody
-//    public String postingPost(){
-//        return "create a new post";
+//    @RequestMapping(path = "/posts/create", method = RequestMethod.POST)
+//    public void postingPost(){
+//        //posting stuff
 //    }
+
+    @PostMapping("/posts/create")
+    @ResponseBody
+    public String postingPost(){
+        return "create a new post";
+    }
 
 }

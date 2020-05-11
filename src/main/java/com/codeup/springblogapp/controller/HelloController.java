@@ -1,6 +1,7 @@
-package com.codeup.springblogapp;
+package controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -29,10 +30,10 @@ public class HelloController {
 
 
     // *** PATH VARIABLES *** //
-    @GetMapping("/hi/{name}")
-    @ResponseBody
-    public String sayHi(@PathVariable String name){
-        return "Hi, " + name; //will return anything typed in url portion "/hi/{name}"
+    @GetMapping("/hello/{name}")
+    public String sayHi(@PathVariable String name, Model model){
+        model.addAttribute("name", name);
+        return "hello"; //will return anything typed in url portion "/hi/{name}"
     }
 
     //integer example for path variable:
@@ -50,4 +51,17 @@ public class HelloController {
     public String showStuff(@PathVariable long id, @PathVariable int version){
         return "stuff with id: " + id + ". and with version: " + version;
     }
+
+    @GetMapping("/join")
+    public String showJoinForm() {
+        return "join";
+    }
+
+    @PostMapping("/join")
+    public String joinCohort(@RequestParam(name = "cohort") String cohort, Model model) {
+        model.addAttribute("cohort", "Welcome to " + cohort + "!");
+        return "join";
+    }
+
+
 }

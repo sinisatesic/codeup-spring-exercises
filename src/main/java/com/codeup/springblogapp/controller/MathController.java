@@ -1,4 +1,4 @@
-package com.codeup.springblogapp;
+package controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +15,7 @@ public class MathController {
     }
 
     @GetMapping("/subtract/{firstNum}/from/{secondNum}")
+    //can also be: /{operation}/{firstNum}/{keyword}/{secondNum}
     @ResponseBody
     public String subtract(@PathVariable int firstNum, @PathVariable int secondNum){
         return "3 subtracted from 10: " + (secondNum - firstNum);

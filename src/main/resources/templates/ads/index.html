@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ads</title>
+    <head th:replace="partials/partials :: head"></head>
+</head>
+<body>
+<nav th:replace="partials/partials :: navbar"></nav>
+
+<div class="container">
+<!--    same as view in jsp-->
+    <h2>Ad Listing</h2>
+    <div th:each="ad : ${ads}">
+        <p style="font-weight: bold;" th:text="${ad.title}"></p>
+        <p style="padding-left: 2rem;" th:text="${ad.description}"></p>
+    </div>
+</div>
+
+<standard_scripts th:replace="partials/partials :: footer">
+</standard_scripts>
+</body>
+</html>
