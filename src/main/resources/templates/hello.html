@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <!--above must be included as attribute in order to use Thymeleaf-->
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head th:replace="partials/partials :: head"></head>
+
 <body>
 <nav th:replace="partials/partials :: navbar"></nav>
-<!--above is fragment which will replace content its in with above navbar partial-->
+<!--above is fragment which will replace content its in with above navbar partial section-->
 
 
     <h1>Hello, <span th:text="${name}">World</span>!</h1>
 <!--Thymeleaf also allows us to use placeholder data in our templates, that is what the "World" inside of the <span> tag is.
  This allows us to open the template in our browser directly and make changes to the HTML, CSS, and JavaScript rapidly, without the need to have (or continuously restart) an entire application server running.-->
 <!--    if just /hello is provided in url, it will result in "Hello, !"-->
+<standard_scripts th:replace="partials/partials :: footer"></standard_scripts>
 </body>
 </html>

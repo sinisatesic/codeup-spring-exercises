@@ -3,13 +3,12 @@
 
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Home Thymeleaf view template</title>
-</head>
+<head th:replace="partials/partials :: head"></head>
+
 <body>
 <nav th:replace="partials/partials :: navbar"></nav>
 <!--above is fragment which will replace content its in with above navbar partial-->
 <h1>This is the home page</h1>
+<standard_scripts th:replace="partials/partials :: footer"></standard_scripts>
 </body>
 </html>
