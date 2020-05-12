@@ -3,13 +3,22 @@
 <head th:replace="partials/partials :: head"></head>
 <body>
 <nav th:replace="partials/partials :: navbar"></nav>
-<h1 th:text="${cohort}"></h1>
 
+
+<h1 th:text="${cohort}"></h1>
+<!--//attribute in @PostMapping for HelloController-->
+
+
+<!--If what you want is to take in information from a View to a Controller,
+ we can use a simple form defined with a post method in HTML, just like this:-->
 <form action="/join" method="post">
     <input type="text" name="cohort" id="cohort-ip" class="field"/>
+<!--    notice name=cohort;
+ this allows manipulation of this form for cohort attribute-->
     <button>Join now</button>
 </form>
 
 <standard_scripts th:replace="partials/partials :: footer"></standard_scripts>
+<!--above is fragment which will replace content its in with above footer partial-->
 </body>
 </html>

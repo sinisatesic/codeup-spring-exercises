@@ -1,3 +1,6 @@
+
+<!--*** view for /home ***-->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -5,7 +8,8 @@
     <title>Home Thymeleaf view template</title>
 </head>
 <body>
-<nav th:replace="partials :: navbar" />
+<nav th:replace="partials/partials :: navbar"></nav>
+<!--above is fragment which will replace content its in with above navbar partial-->
 <h1>This is the home page</h1>
 </body>
 </html>
