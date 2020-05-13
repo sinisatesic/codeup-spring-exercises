@@ -10,15 +10,15 @@
 
 <div class="container">
 
-    <h2>Create Post</h2>
+    <h2>Edit Post</h2>
 
-    <form action="/posts/create" method="post">
+    <form method="post" th:action="@{'/posts/edit/' + ${post.getId()}}">
         <label for="title">Title: </label>
-        <input type="text" name="title" id="title" class="field"/>
+        <input type="text" name="title" id="title" class="field" th:value="${post.title}"/>
         <br><br>
         <label for="body">Body:</label><br>
-        <textarea name="body" id="body" class="field" rows="4" cols="50"></textarea><br>
-        <button>Save</button>
+        <textarea name="body" id="body" class="field" rows="4" cols="50" th:text="${post.body}"></textarea><br>
+        <button type="submit">Edit</button>
     </form>
 
 </div>
