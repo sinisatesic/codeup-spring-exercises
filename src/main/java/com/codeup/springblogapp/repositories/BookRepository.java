@@ -1,7 +1,11 @@
-package repositories;
+package com.codeup.springblogapp.repositories;
 
-import com.codeup.springblogapp.model.Ad;
+
+import com.codeup.springblogapp.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BookRepository extends JpaRepository<Ad, Long> {
+import java.util.List;
+
+public interface BookRepository extends JpaRepository<Book, Long> {
+    List<Book> findByPubYear(int year);
 }

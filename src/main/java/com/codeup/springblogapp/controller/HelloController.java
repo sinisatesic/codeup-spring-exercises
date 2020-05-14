@@ -1,4 +1,4 @@
-package controller;
+package com.codeup.springblogapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +16,8 @@ public class HelloController {
 //    }
 
     @GetMapping("/hello")
-    @ResponseBody
     public String helloSpring(){
-        return "<em>Hello from Spring!</em>";
+        return "hello";
     }
 
     @RequestMapping(path = "/upload", method = RequestMethod.POST)
@@ -58,6 +57,7 @@ public class HelloController {
     }
 
     @PostMapping("/join")
+//    paramater is cohort and thus in join.html, cohort th will be dynamically populated
     public String joinCohort(@RequestParam(name = "cohort") String cohort, Model model) {
         model.addAttribute("cohort", "Welcome to " + cohort + "!");
         return "join";

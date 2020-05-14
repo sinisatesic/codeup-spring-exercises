@@ -1,7 +1,7 @@
-package controller;
+package com.codeup.springblogapp.controller;
 
 
-import model.Ad;
+import com.codeup.springblogapp.model.Ad;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +14,7 @@ import java.util.List;
 @Controller
 public class AdController {
 
+    //PLACEHOLDER DATA - NOT DYNAMIC
     @GetMapping("/ads")
     public String showAds(Model model){
         List<Ad> adList = new ArrayList<>();

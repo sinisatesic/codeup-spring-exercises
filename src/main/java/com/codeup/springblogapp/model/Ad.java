@@ -1,4 +1,4 @@
-package model;
+package com.codeup.springblogapp.model;
 
 public class Ad {
 
