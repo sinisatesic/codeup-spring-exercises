@@ -2,7 +2,9 @@ package com.codeup.springblogapp.controller;
 
 
 import com.codeup.springblogapp.model.Post;
+import com.codeup.springblogapp.model.User;
 import com.codeup.springblogapp.repositories.PostRepository;
+import com.codeup.springblogapp.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,10 +45,18 @@ public class PostController {
 
     //********* DEPENDENCY INJECTION ***********
     private PostRepository postRepo;
+    private UserRepository userRepo;
 
-    public PostController(PostRepository postRepo) {
+    public PostController(PostRepository postRepo, UserRepository userRepo) {
         this.postRepo = postRepo;
+        this.userRepo = userRepo;
     }
+
+//    private UserRepository userRepo;
+//
+//    public PostController(UserRepository userRepo) {
+//        this.userRepo = userRepo;
+//    }
     //***********************************
 
 
@@ -80,7 +90,9 @@ public class PostController {
     public String createPost(@RequestParam(name = "title") String title,
                            @RequestParam(name = "body") String body,
                            Model model) {
-        Post post = new Post(title, body);
+
+        User user = userRepo.getOne(1L);
+        Post post = new Post(title, body, user);
         postRepo.save(post);
                 //save persists the post object
         model.addAttribute("post", post);
@@ -100,11 +112,11 @@ public class PostController {
 //        return "posts/show";
 //    }
 
-
     //view individual post with id
     @GetMapping("/posts/{id}")
     public String viewPost(@PathVariable long id, Model model) {
         model.addAttribute("post", postRepo.getPostById(id));
+        //can also do .getOne(id), which is JPA, instead of .getPostById(id);
         return "/posts/show";
     }
     //***********************************
