@@ -7,10 +7,7 @@ import com.codeup.springblogapp.repositories.PostRepository;
 import com.codeup.springblogapp.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 
 @Controller
@@ -82,20 +79,21 @@ public class PostController {
     //********* CREATE NEW POST ***********
     @GetMapping("posts/create")
     public String gotoCreatePostForm(Model model){
+        model.addAttribute("post", new Post());
+        //creates post from model
         return "posts/create";
     }
 
 
     @PostMapping("/posts/create")
-    public String createPost(@RequestParam(name = "title") String title,
-                           @RequestParam(name = "body") String body,
-                           Model model) {
+    public String createPost(@ModelAttribute Post post) {
 
         User user = userRepo.getOne(1L);
-        Post post = new Post(title, body, user);
+//        Post post = new Post(title, body, user);
+        post.setUser(user);
         postRepo.save(post);
-                //save persists the post object
-        model.addAttribute("post", post);
+        //save persists the post object
+//        model.addAttribute("post", post);
         //shuffles this to view page/template
         //pushes to db to view
         return "posts/show";

@@ -15,8 +15,8 @@ public class Category {
 
     // many categories can be mapped to multiple or many ads and vice-versa
     // ergo, ManyToMany
-    @ManyToMany(mappedBy = "categories") //same as table name above; always name of what class it's in
-    private List<Ad> ads;
+//    @ManyToMany(mappedBy = "categories") //same as table name above; always name of what class it's in
+//    private List<Ad> ads;
 
 
 }

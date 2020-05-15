@@ -12,12 +12,12 @@
 
     <h2>Create Post</h2>
 
-    <form action="/posts/create" method="post">
+    <form th:action="@{/posts/create}" th:method="post" th:object="${post}" class="form-group">
         <label for="title">Title: </label>
-        <input type="text" name="title" id="title" class="field"/>
+        <input th:field="*{title}" type="text" name="title" id="title" class="field form-text"/>
         <br><br>
         <label for="body">Body:</label><br>
-        <textarea name="body" id="body" class="field" rows="4" cols="50"></textarea><br>
+        <textarea th:field="*{body}" name="body" id="body" class="field form-text" rows="4" cols="50"></textarea><br>
         <button>Save</button>
     </form>
 

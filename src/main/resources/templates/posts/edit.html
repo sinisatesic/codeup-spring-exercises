@@ -12,7 +12,7 @@
 
     <h2>Edit Post</h2>
 
-    <form method="post" th:action="@{'/posts/edit/' + ${post.getId()}}">
+    <form method="post" th:action="@{'/posts/edit/' + ${post.getId()}}" class="form-group">
         <label for="title">Title: </label>
         <input type="text" name="title" id="title" class="field" th:value="${post.title}"/>
         <br><br>
@@ -20,6 +20,7 @@
         <textarea name="body" id="body" class="field" rows="4" cols="50" th:text="${post.body}"></textarea><br>
         <button type="submit">Edit</button>
     </form>
+
 
 </div>
 
