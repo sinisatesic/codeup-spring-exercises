@@ -1,6 +1,6 @@
 /*general color font for all*/
 * {
-    color: #18222F;
+    color: #27374C;
 }
 
 /*navbar and its children*/
@@ -9,8 +9,8 @@
     text-align: center;
 }
 
-.nav-item {
-    color: #18222F;
+ul li .nav-item {
+    color: #27374C;
 }
 /*//////////////////////*/
 
@@ -31,22 +31,22 @@ button:hover {
 /*//////////////////////*/
 
 /*content on post template*/
-.post-title {
-    border: 5px solid #6E95C4;
-    border-radius: 100vmax;
-    margin: 10px auto;
-    width: 80%;
-    box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);
-}
+/*.post-title {*/
+/*    border: 5px solid #6E95C4;*/
+/*    border-radius: 100vmax;*/
+/*    margin: 10px auto;*/
+/*    width: 80%;*/
+/*    box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);*/
+/*}*/
 
-.post-div {
-    border: 5px solid #6E95C4;
-    background-color: #C3EECF;
-    text-align: center;
-    border-radius: 100vmax;
-    margin: 20px 0;
-    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
-}
+/*.post-div {*/
+/*    border: 5px solid #6E95C4;*/
+/*    background-color: #C3EECF;*/
+/*    text-align: center;*/
+/*    !*border-radius: 100vmax;*!*/
+/*    margin: 20px 0;*/
+/*    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);*/
+/*}*/
 
 .delete-button {
     letter-spacing: 3px;
@@ -95,6 +95,16 @@ button:hover {
     list-style-type: none;
     text-underline: none;
     text-decoration: none;
+}
+
+input#title.field.form-text {
+    border: 3px solid #6E95C4;
+    border-radius: 100vmax;
+}
+
+textarea#body.field.form-text {
+    border: 3px solid #6E95C4;
+    /*border-radius: 25px;*/
 }
 /*//////////////////////*/
 
