@@ -18,11 +18,11 @@
 <!--&lt;!&ndash;        need th ref - need to tell which post to see&ndash;&gt;-->
 <!--    </div>-->
     <div class="post-div mb-3" th:each="post : ${posts}">
-        <a th:href="@{|/posts/${post.getId()}|}"><h2 th:text="${post.title}" /></a>
+<!--        <a th:href="@{|/posts/${post.getId()}|}"><h2 th:text="${post.title}" /></a>-->
+        <h2 th:text="${post.title}" class="post-title"/>
         <p th:text="${post.body}" />
-        <a th:href="@{|/posts/delete/${post.getId()}|}"><p style="padding-left: 2rem;">DELETE</p></a>
-        <a th:href="@{|/posts/edit/${post.getId()}|}"><p style="padding-left: 2rem;">EDIT</p></a>
-        <hr/>
+        <a th:href="@{|/posts/delete/${post.getId()}|}" class="delete-link"><p style="padding-left: 2rem;" class="delete-button">DELETE</p></a>
+        <a th:href="@{|/posts/edit/${post.getId()}|}" class="edit-link"><p style="padding-left: 2rem;" class="edit-button">EDIT</p></a>
     </div>
 </div>
 

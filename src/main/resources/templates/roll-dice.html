@@ -8,24 +8,24 @@
 <nav th:replace="partials/partials :: navbar"></nav>
 
 </nav>
-<div th:if="${userRoll == null}">
-    <h1>Pick number from 1-6 to guess dice rolls</h1>
-    <a href="/roll-dice/1">1</a>
-    <a href="/roll-dice/2">2</a>
-    <a href="/roll-dice/3">3</a>
-    <a href="/roll-dice/4">4</a>
-    <a href="/roll-dice/5">5</a>
-    <a href="/roll-dice/6">6</a>
+<div th:if="${userRoll == null}" class="roll-numbers">
+    <h1 class="dice-title">Pick number from 1-6 to guess dice rolls</h1>
+    <a href="/roll-dice/1"><button>1</button></a>
+    <a href="/roll-dice/1"><button>2</button></a>
+    <a href="/roll-dice/1"><button>3</button></a>
+    <a href="/roll-dice/1"><button>4</button></a>
+    <a href="/roll-dice/1"><button>5</button></a>
+    <a href="/roll-dice/1"><button>6</button></a>
 </div>
 
-<div th:if="${userRoll != null}">
+<div th:if="${userRoll != null}" class="text-center">
     <div th:each="item : ${diceRolls}">
         <h1>Number of your roll: <span th:text="${item}"></span></h1>
         <h2 th:if="${userRoll == item}">This roll matches with yours</h2>
     </div>
     <h1>You chose number: <span th:text="${userRoll}"></span> </h1>
 
-    <button type="submit"><a href="/roll-dice">Go again</a></button>
+    <a href="/roll-dice"><button type="submit">Go again</button></a>
 </div>
 
 <standard_scripts th:replace="partials/partials :: footer"></standard_scripts>

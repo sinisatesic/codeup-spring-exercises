@@ -1,4 +1,119 @@
+/*general color font for all*/
 * {
-    background-color: yellow;
+    color: #18222F;
 }
 
+/*navbar and its children*/
+.navbar {
+    background-color: #C3EECF;
+    text-align: center;
+}
+
+.nav-item {
+    color: #18222F;
+}
+/*//////////////////////*/
+
+/*buttons, mainly related to posts*/
+button {
+    color: #6E95C4;
+    text-align: center;
+    padding: 10px;
+    border-radius: 100vmax;
+    border: 3px solid #6E95C4;
+    cursor: pointer;
+}
+button:hover {
+    transition: ease 255ms;
+    background-color: #6E95C4;
+    color: #fff;
+}
+/*//////////////////////*/
+
+/*content on post template*/
+.post-title {
+    border: 5px solid #6E95C4;
+    border-radius: 100vmax;
+    margin: 10px auto;
+    width: 80%;
+    box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);
+}
+
+.post-div {
+    border: 5px solid #6E95C4;
+    background-color: #C3EECF;
+    text-align: center;
+    border-radius: 100vmax;
+    margin: 20px 0;
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+}
+
+.delete-button {
+    letter-spacing: 3px;
+    /*border: 1px solid lime;*/
+    text-align: center;
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+.delete-button:hover {
+    transition: ease 255ms;
+    letter-spacing: 7px;
+}
+.delete-link {
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+.delete-link:hover {
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+
+.edit-button {
+    letter-spacing: 7px;
+    /*border: 1px solid lime;*/
+    text-align: center;
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+.edit-button:hover {
+    transition: ease 255ms;
+    letter-spacing: 3px;
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+.edit-link {
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+.edit-link:hover {
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+/*//////////////////////*/
+
+/*roll-dice page*/
+.dice-title {
+    text-align: center;
+    color: #6E95C4;
+}
+.roll-numbers{
+    text-align: center;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+.roll-numbers button {
+    /*color: #5e5e5e;*/
+    border: 3px solid #6E95C4;
+    margin: 10px 15px;
+    border-radius: 50%;
+    padding: 5px 11px;
+    list-style-type: none;
+}
+/*//////////////////////*/

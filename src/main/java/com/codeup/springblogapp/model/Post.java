@@ -12,7 +12,7 @@ public class Post {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false, columnDefinition = "text")
+    @Column(nullable = false, columnDefinition = "LONGTEXT")
     private String body;
 
     @ManyToOne
