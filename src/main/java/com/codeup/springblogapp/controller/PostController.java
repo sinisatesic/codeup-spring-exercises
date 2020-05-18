@@ -41,26 +41,20 @@ public class PostController {
 
 
     //********* DEPENDENCY INJECTION ***********
-    private PostRepository postRepo;
+    private PostRepository postRepo; //can also be called postDao as logical naming convention
     private UserRepository userRepo;
 
     public PostController(PostRepository postRepo, UserRepository userRepo) {
         this.postRepo = postRepo;
         this.userRepo = userRepo;
     }
-
-//    private UserRepository userRepo;
-//
-//    public PostController(UserRepository userRepo) {
-//        this.userRepo = userRepo;
-//    }
     //***********************************
 
 
     //********* SHOW ALL POSTS ***********
     @GetMapping("/posts")
     public String showPosts(Model model){
-    //jpa da wae:
+    //da wae of jpa:
     model.addAttribute("posts", postRepo.findAll());
 
      //hardcoded - before jpa
