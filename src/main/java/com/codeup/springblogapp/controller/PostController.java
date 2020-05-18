@@ -114,7 +114,6 @@ public class PostController {
     //***********************************
 
 
-
     //********* EDIT A POST ***********
     @GetMapping("/posts/edit/{id}")
     public String postEditForm(@PathVariable long id, Model model) {
@@ -122,11 +121,22 @@ public class PostController {
         model.addAttribute("post", post);
         return "/posts/edit";
     }
+
+    //below is original way - before @ModelAttribute
+//    @PostMapping("/posts/edit/{id}")
+//    public String postEdit(@PathVariable long id, @RequestParam(name = "title") String title, @RequestParam(name = "body") String body) {
+//        Post post = postRepo.getPostById(id);
+//        post.setTitle(title);
+//        post.setBody(body);
+//        postRepo.save(post);
+//        return "redirect:/posts";
+//    }
+
     @PostMapping("/posts/edit/{id}")
-    public String postEdit(@PathVariable long id, @RequestParam(name = "title") String title, @RequestParam(name = "body") String body) {
-        Post post = postRepo.getPostById(id);
-        post.setTitle(title);
-        post.setBody(body);
+    public String postEdit(@ModelAttribute Post post) {
+//        Post post = postRepo.getPostById(id);
+//        post.setTitle(title);
+//        post.setBody(body);
         postRepo.save(post);
         return "redirect:/posts";
     }
