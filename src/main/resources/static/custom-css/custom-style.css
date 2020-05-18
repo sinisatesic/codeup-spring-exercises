@@ -31,22 +31,23 @@ button:hover {
 /*//////////////////////*/
 
 /*content on post template*/
-/*.post-title {*/
-/*    border: 5px solid #6E95C4;*/
-/*    border-radius: 100vmax;*/
-/*    margin: 10px auto;*/
-/*    width: 80%;*/
-/*    box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);*/
-/*}*/
+.post-title {
+    border: 5px solid #6E95C4;
+    background-color: #6E95C4;
+    border-radius: 100vmax;
+    margin: 10px auto;
+    width: 80%;
+    box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);
+}
 
-/*.post-div {*/
-/*    border: 5px solid #6E95C4;*/
-/*    background-color: #C3EECF;*/
-/*    text-align: center;*/
-/*    !*border-radius: 100vmax;*!*/
-/*    margin: 20px 0;*/
-/*    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);*/
-/*}*/
+.post-div {
+    border: 5px solid #6E95C4;
+    background-color: #C3EECF;
+    text-align: center;
+    /*border-radius: 100vmax;*/
+    margin: 20px 0;
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+}
 
 .delete-button {
     letter-spacing: 3px;
