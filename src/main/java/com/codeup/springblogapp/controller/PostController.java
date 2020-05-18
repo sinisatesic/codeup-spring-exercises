@@ -5,6 +5,8 @@ import com.codeup.springblogapp.model.Post;
 import com.codeup.springblogapp.model.User;
 import com.codeup.springblogapp.repositories.PostRepository;
 import com.codeup.springblogapp.repositories.UserRepository;
+import com.codeup.springblogapp.services.EmailService;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -43,10 +45,12 @@ public class PostController {
     //********* DEPENDENCY INJECTION ***********
     private PostRepository postRepo; //can also be called postDao as logical naming convention
     private UserRepository userRepo;
+    private EmailService emailService;
 
-    public PostController(PostRepository postRepo, UserRepository userRepo) {
+    public PostController(PostRepository postRepo, UserRepository userRepo, EmailService emailService) {
         this.postRepo = postRepo;
         this.userRepo = userRepo;
+        this.emailService = emailService;
     }
     //***********************************
 
@@ -82,17 +86,19 @@ public class PostController {
     @PostMapping("/posts/create")
     public String createPost(@ModelAttribute Post post) {
 
-        User user = userRepo.getOne(1L);
-//        Post post = new Post(title, body, user);
+//        User user = userRepo.getOne(1L);
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         post.setUser(user);
+        emailService.prepareAndSend(post,"post created", "You done created a post");
         postRepo.save(post);
         //save persists the post object
-//        model.addAttribute("post", post);
         //shuffles this to view page/template
         //pushes to db to view
         return "posts/show";
     }
     //***********************************
+
+
 
 
     //********* SHOW SINGLE POST ***********
