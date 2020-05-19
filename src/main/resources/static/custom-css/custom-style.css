@@ -10,10 +10,18 @@ button:focus {
     outline: none;
 }
 
+h1 {
+    text-align: center;
+}
+
 /*navbar and its children*/
 .navbar {
     background-color: #C3EECF;
     text-align: center;
+}
+
+.template-h2 {
+    margin: 0 auto;
 }
 
 ul li .nav-item {
@@ -37,6 +45,14 @@ button:hover {
 }
 /*//////////////////////*/
 
+/*login template*/
+.login-form {
+    text-align: center;
+}
+.logout {
+    text-align: center;
+}
+/*//////////////////////*/
 /*content on post template*/
 .post-title {
     border: 5px solid #6E95C4;
@@ -107,14 +123,16 @@ button:hover {
     text-decoration: none;
 }
 
-input#title.field.form-text {
+input#title.field.form-text, input#title.field {
     border: 3px solid #6E95C4;
     border-radius: 100vmax;
+    margin: 0 auto;
 }
 
-textarea#body.field.form-text {
+textarea#body.field.form-text, textarea#body.field {
     border: 3px solid #6E95C4;
     /*border-radius: 25px;*/
+    margin: 0 auto;
 }
 /*//////////////////////*/
 

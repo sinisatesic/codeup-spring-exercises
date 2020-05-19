@@ -30,13 +30,14 @@ public class PostController {
     //***********************************
 
 
+
     //********* SHOW ALL POSTS ***********
     @GetMapping("/posts")
     public String showPosts(Model model){
-    //da wae of jpa:
-    model.addAttribute("posts", postRepo.findAll());
-    return "posts/index";
-}
+        //da wae of jpa:
+        model.addAttribute("posts", postRepo.findAll());
+        return "posts/index";
+    }
     //***********************************
 
 
@@ -56,7 +57,7 @@ public class PostController {
         post.setUser(user);
         emailService.prepareAndSend(post,"post created", "You done created a post");
         postRepo.save(post);
-        return "redirect:/posts";
+        return "posts/show";
     }
     //***********************************
 

@@ -12,7 +12,7 @@
 
 <div class="container">
     <!--    same as view in jsp-->
-    <h2>Viewing posts</h2>
+    <h2 class="template-h2">Check out these fresh posts</h2>
 <!--    <div th:each="post : ${posts}">-->
 <!--        <a href=""></a><p style="font-weight: bold;" th:text="${post.title}"></p>-->
 <!--        <p style="padding-left: 2rem;" th:text="${post.body}"></p>-->
@@ -25,6 +25,7 @@
         <p th:text="${post.body}"></p>
         <a th:href="@{|/posts/delete/${post.getId()}|}" class="delete-link"><p style="padding-left: 2rem;" class="delete-button">DELETE</p></a>
         <a th:href="@{|/posts/edit/${post.getId()}|}" class="edit-link"><p style="padding-left: 2rem;" class="edit-button">EDIT</p></a>
+<!--        <a th:href="@{|/posts/${post.id}|}" class="edit-link"><p style="padding-left: 2rem;">Read more...</p></a>-->
     </div>
 </div>
 
