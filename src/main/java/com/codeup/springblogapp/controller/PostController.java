@@ -94,7 +94,7 @@ public class PostController {
         //save persists the post object
         //shuffles this to view page/template
         //pushes to db to view
-        return "posts/show";
+        return "redirect:/posts";
     }
     //***********************************
 
@@ -102,6 +102,7 @@ public class PostController {
 
 
     //********* SHOW SINGLE POST ***********
+
     // commented out below is before jpa
 //    @GetMapping("/post")
 //    public String showPost(Model model){
