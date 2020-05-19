@@ -14,31 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class PostController {
-    //    generic string returns - not templates - BEGIN
-//    @GetMapping("/posts")
-//    @ResponseBody
-//    public String postsIndex(){
-//        return "posts index page";
-//    }
-//
-//    @GetMapping("/posts/{id}")
-//    @ResponseBody
-//    public String viewIndividualPost(@PathVariable long id){
-//        return "view an individual post at id: " + id;
-//    }
-//
-//    @GetMapping("/posts/create")
-//    @ResponseBody
-//    public String creatingPost(){
-//        return "view the form for creating a post";
-//    }
-//
-//    @PostMapping("/posts/create")
-//    @ResponseBody
-//    public String postingPost(){
-//        return "create a new post";
-//    }
-    //    generic string returns - not templates - END
 
 
 
@@ -60,15 +35,7 @@ public class PostController {
     public String showPosts(Model model){
     //da wae of jpa:
     model.addAttribute("posts", postRepo.findAll());
-
-     //hardcoded - before jpa
-//    List<Post> postList = new ArrayList<>();
-//    Post post = new Post("Blog post 1", "cheese");
-//    postList.add(post);
-//    post = new Post("Blog post 2", "grapes");
-//    postList.add(post); //adding the ad to array list
-//    model.addAttribute("posts", postList);
-        return "posts/index";
+    return "posts/index";
 }
     //***********************************
 
@@ -85,15 +52,10 @@ public class PostController {
 
     @PostMapping("/posts/create")
     public String createPost(@ModelAttribute Post post) {
-
-//        User user = userRepo.getOne(1L);
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         post.setUser(user);
         emailService.prepareAndSend(post,"post created", "You done created a post");
         postRepo.save(post);
-        //save persists the post object
-        //shuffles this to view page/template
-        //pushes to db to view
         return "redirect:/posts";
     }
     //***********************************
@@ -102,14 +64,6 @@ public class PostController {
 
 
     //********* SHOW SINGLE POST ***********
-
-    // commented out below is before jpa
-//    @GetMapping("/post")
-//    public String showPost(Model model){
-//        Post post = new Post("single blog post", "stuff");
-//        model.addAttribute("Post", post);
-//        return "posts/show";
-//    }
 
     //view individual post with id
     @GetMapping("/posts/{id}")
@@ -141,9 +95,6 @@ public class PostController {
 
     @PostMapping("/posts/edit/{id}")
     public String postEdit(@ModelAttribute Post post) {
-//        Post post = postRepo.getPostById(id);
-//        post.setTitle(title);
-//        post.setBody(body);
         postRepo.save(post);
         return "redirect:/posts";
     }
