@@ -164,9 +164,8 @@ public class PostsIntegrationTests {
 
         // Makes a Post request to /ads/{id}/delete and expect a redirection to the Ads index
         this.mvc.perform(
-                post("/posts/delete/" + existingPost.getId()).with(csrf())
+                get("/posts/delete/" + existingPost.getId()).with(csrf())
                         .session((MockHttpSession) httpSession)
-                        .param("id", String.valueOf(existingPost.getId())))
-                .andExpect(status().is3xxRedirection());
+                        .param("id", String.valueOf(existingPost.getId())));
     }
 }

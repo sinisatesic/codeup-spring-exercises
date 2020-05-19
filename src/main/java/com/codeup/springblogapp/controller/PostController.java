@@ -104,7 +104,7 @@ public class PostController {
 
 
     //********* DELETE A POST ***********
-    @PostMapping("/posts/delete/{id}")
+    @GetMapping("/posts/delete/{id}")
     public String deletePost(@PathVariable long id, Model model){
 
         postRepo.deleteById(id);
