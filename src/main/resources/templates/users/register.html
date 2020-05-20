@@ -10,7 +10,7 @@
 <body>
 <nav th:replace="partials/partials :: navbar"></nav>
 
-<div class="container">
+<div class="container register-form">
 <h1>Create an account</h1>
 <form th:action="@{/register}" method="POST" th:object="${user}">
     <label for="username">Username</label>
@@ -22,7 +22,7 @@
     <label for="password">Password</label>
     <input id="password" type="password" th:field="*{password}" />
 
-    <input value="Sign me up!" type="submit" /><br>
+    <input value="Register!" class="register-input" type="submit" /><br>
 </form>
 </div>
 

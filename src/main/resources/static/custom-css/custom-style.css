@@ -1,8 +1,23 @@
-/*general color font for all*/
+/*//////////////////////*/
+  /*GENERAL COLOR FONT*/
+/*//////////////////////*/
 * {
     color: #27374C;
 }
 
+/*//////////////////////*/
+      /*MEDIA QUERY*/
+/*//////////////////////*/
+@media (max-width: 770px){
+    button.nav-link.register-button {
+        margin-left: 1px;
+        margin-top: -7.5px;
+    }
+}
+
+/*//////////////////////*/
+/*GENERAL TAGS & SETTINGS*/
+/*//////////////////////*/
 input:focus,
 select:focus,
 textarea:focus,
@@ -12,12 +27,27 @@ button:focus {
 
 h1 {
     text-align: center;
+    font-family: 'Major Mono Display', monospace;
 }
 
-/*navbar and its children*/
+h2 {
+    font-family: 'Major Mono Display', monospace;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*//////////////////////*/
+ /*NAV BAR AND CHILDREN*/
+/*//////////////////////*/
 .navbar {
     background-color: #C3EECF;
     text-align: center;
+}
+
+label {
+    font-family: 'Raleway', sans-serif;
 }
 
 .template-h2 {
@@ -29,7 +59,10 @@ ul li .nav-item {
 }
 /*//////////////////////*/
 
-/*buttons, mainly related to posts*/
+
+/*//////////////////////*/
+       /*BUTTONS*/
+/*//////////////////////*/
 button {
     color: #6E95C4;
     text-align: center;
@@ -37,66 +70,50 @@ button {
     border-radius: 100vmax;
     border: 3px solid #6E95C4;
     cursor: pointer;
+    font-family: 'Raleway', sans-serif;
 }
 button:hover {
     transition: ease 255ms;
     background-color: #6E95C4;
     color: #fff;
 }
-/*//////////////////////*/
-
-/*login template*/
-.login-form {
+.register-button {
+    margin-top: -18px;
+    margin-left: -15px;
+    font-family: 'Raleway', sans-serif;
+}
+.register-input {
+    color: #6E95C4;
     text-align: center;
+    padding: 10px;
+    border-radius: 100vmax;
+    border: 3px solid #6E95C4;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+.register-input:hover {
+    transition: ease 255ms;
+    background-color: #6E95C4;
+    color: #fff;
+}
+.login-button {
+    color: #6E95C4;
+    text-align: center;
+    padding: 10px;
+    border-radius: 100vmax;
+    border: 3px solid #6E95C4;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+.login-button:hover {
+    transition: ease 255ms;
+    background-color: #6E95C4;
+    color: #fff;
 }
 .logout {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
-/*//////////////////////*/
-/*content on post template*/
-.post-title {
-    border: 5px solid #6E95C4;
-    border-radius: 100vmax;
-    margin: 10px auto;
-    width: 80%;
-    box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);
-}
-
-
-
-.post-div {
-    border: 5px solid #6E95C4;
-    background-color: #C3EECF;
-    text-align: center;
-    /*border-radius: 100vmax;*/
-    margin: 20px 0;
-    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
-    text-wrap: normal;
-}
-
-.delete-button {
-    letter-spacing: 3px;
-    /*border: 1px solid lime;*/
-    text-align: center;
-    list-style-type: none;
-    text-underline: none;
-    text-decoration: none;
-}
-.delete-button:hover {
-    transition: ease 255ms;
-    letter-spacing: 7px;
-}
-.delete-link {
-    list-style-type: none;
-    text-underline: none;
-    text-decoration: none;
-}
-.delete-link:hover {
-    list-style-type: none;
-    text-underline: none;
-    text-decoration: none;
-}
-
 .edit-button {
     letter-spacing: 7px;
     /*border: 1px solid lime;*/
@@ -112,6 +129,78 @@ button:hover {
     text-underline: none;
     text-decoration: none;
 }
+.delete-button {
+    letter-spacing: 3px;
+    /*border: 1px solid lime;*/
+    text-align: center;
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+.delete-button:hover {
+    transition: ease 255ms;
+    letter-spacing: 7px;
+}
+/*//////////////////////*/
+
+
+/*//////////////////////*/
+    /*LOGIN TEMPLATE*/
+/*//////////////////////*/
+.login-form {
+    text-align: center;
+}
+input#username {
+    border: 3px solid #6E95C4;
+    border-radius: 100vmax;
+    font-family: 'Raleway', sans-serif;
+}
+input#password {
+    border: 3px solid #6E95C4;
+    border-radius: 100vmax;
+    font-family: 'Raleway', sans-serif;
+}
+input#email {
+    border: 3px solid #6E95C4;
+    border-radius: 100vmax;
+    font-family: 'Raleway', sans-serif;
+}
+/*//////////////////////*/
+
+.register-form {
+    text-align: center;
+}
+
+/*//////////////////////*/
+     /*POST TEMPLATE*/
+/*//////////////////////*/
+.post-title {
+    border: 5px solid #6E95C4;
+    border-radius: 100vmax;
+    background-color: #fff;
+    margin: 10px auto;
+    width: 80%;
+    box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);
+}
+.post-div {
+    border: 5px solid #6E95C4;
+    background-color: #C3EECF;
+    text-align: center;
+    /*border-radius: 100vmax;*/
+    margin: 20px 0;
+    box-shadow: 0 11px 15px rgba(0,0,0,0.30), 0 12px 12px rgba(0,0,0,0.22);
+    text-wrap: normal;
+}
+.delete-link {
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
+.delete-link:hover {
+    list-style-type: none;
+    text-underline: none;
+    text-decoration: none;
+}
 .edit-link {
     list-style-type: none;
     text-underline: none;
@@ -122,13 +211,11 @@ button:hover {
     text-underline: none;
     text-decoration: none;
 }
-
 input#title.field.form-text, input#title.field {
     border: 3px solid #6E95C4;
     border-radius: 100vmax;
     margin: 0 auto;
 }
-
 textarea#body.field.form-text, textarea#body.field {
     border: 3px solid #6E95C4;
     /*border-radius: 25px;*/
@@ -136,7 +223,10 @@ textarea#body.field.form-text, textarea#body.field {
 }
 /*//////////////////////*/
 
-/*roll-dice page*/
+
+/*//////////////////////*/
+  /*ROLL DICE TEMPLATE*/
+/*//////////////////////*/
 .dice-title {
     text-align: center;
     color: #6E95C4;
