@@ -81,7 +81,7 @@ public class PostController {
     public String postEditForm(@PathVariable long id, Model model) {
         Post post = postRepo.getPostById(id);
         model.addAttribute("post", post);
-        return "/posts/edit";
+        return "posts/edit";
     }
 
     //below is original way - before @ModelAttribute
