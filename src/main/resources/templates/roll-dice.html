@@ -20,7 +20,7 @@
 
 <div th:if="${userRoll != null}" class="text-center">
     <div th:each="item : ${diceRolls}">
-        <h1>Number of your roll: <span th:text="${item}"></span></h1>
+        <h1 style="text-align: center">Number of your roll: <span th:text="${item}"></span></h1>
         <h2 th:if="${userRoll == item}">This roll matches with yours</h2>
     </div>
     <h1>You chose number: <span th:text="${userRoll}"></span> </h1>

@@ -14,6 +14,11 @@
         margin-top: -7.5px;
     }
 }
+@media (max-width: 1045px){
+    .spin-container, h5 {
+        display: none;
+    }
+}
 
 /*//////////////////////*/
 /*GENERAL TAGS & SETTINGS*/
@@ -25,13 +30,14 @@ button:focus {
     outline: none;
 }
 
-h1 {
-    text-align: center;
-    font-family: 'Major Mono Display', monospace;
-}
+/*h1 {*/
+/*    text-align: center;*/
+/*    font-family: 'Major Mono Display', monospace;*/
+/*}*/
 
-h2 {
+h1, h2, h5 {
     font-family: 'Major Mono Display', monospace;
+    animation: h2s-fade 2s ease-out;
 }
 
 p {
@@ -141,9 +147,13 @@ button:hover {
 }
 /*//////////////////////*/
 
+
 /*//////////////////////*/
 /*HOME TEMPLATE*/
 /*//////////////////////*/
+.traveller-title {
+    text-align: center;
+}
 #first-h {
     animation: letter-fade-in 2s ease-in-out;
 }
@@ -210,7 +220,60 @@ button:hover {
     animation: letter-fade-in 4.6s ease-in;
     animation-delay: .26s;
 }
-
+.h2s-home {
+    text-align: center;
+    animation: h2s-fade 1s ease-out;
+}
+@keyframes h2s-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.spin-container {
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 85%;
+    left: 53%;
+    margin: -150px 0 0 -150px;
+}
+.square{
+    height: 94%;
+    width: 94%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -47% 0 0 -47%;
+    border-radius: 25%;
+    transition-property: transform;
+    transition-duration: 5s;
+}
+.square:hover {
+    transform: rotate(90deg);
+}
+.square-two {
+    transition-property: transform;
+    transition-duration: 5s;
+}
+.square-two:hover {
+    transform: rotate(360deg);
+}
+.two {
+    background: #fff;
+    animation: rotate 11s infinite linear;
+}
+@keyframes rotate{
+    0%{ transform: rotate(180deg); background: #fff}
+    20%{background: #6E95C4;}
+    40%{background: #C3EECF;}
+    60%{background: #6E95C4;}
+    80%{ background: #C3EECF;}
+    100%{ transform: rotate(360deg); background: #fff}
+}
 
 /*//////////////////////*/
     /*LOGIN TEMPLATE*/
@@ -237,6 +300,7 @@ input#email {
 
 .register-form {
     text-align: center;
+    align-content: center;
 }
 
 /*//////////////////////*/
