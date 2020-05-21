@@ -116,7 +116,6 @@ button:hover {
 }
 .edit-button {
     letter-spacing: 7px;
-    /*border: 1px solid lime;*/
     text-align: center;
     list-style-type: none;
     text-underline: none;
@@ -131,7 +130,6 @@ button:hover {
 }
 .delete-button {
     letter-spacing: 3px;
-    /*border: 1px solid lime;*/
     text-align: center;
     list-style-type: none;
     text-underline: none;
@@ -142,6 +140,76 @@ button:hover {
     letter-spacing: 7px;
 }
 /*//////////////////////*/
+
+/*//////////////////////*/
+/*HOME TEMPLATE*/
+/*//////////////////////*/
+#first-h {
+    animation: letter-fade-in 2s ease-in-out;
+}
+@keyframes letter-fade-in {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+#first-e {
+    animation: letter-fade-in 2.2s ease-in;
+    animation-delay: .2s;
+}
+#first-l {
+    animation: letter-fade-in 2.4s ease-in;
+    animation-delay: .4s;
+}
+#second-l {
+    animation: letter-fade-in 2.6s ease-in;
+    animation-delay: .6s;
+}
+#first-o {
+    animation: letter-fade-in 2.8s ease-in;
+    animation-delay: .8s;
+}
+#first-t {
+    animation: letter-fade-in 3s ease-in;
+    animation-delay: .10s;
+}
+#first-r {
+    animation: letter-fade-in 3.2s ease-in;
+    animation-delay: .12s;
+}
+#first-a {
+    animation: letter-fade-in 3.4s ease-in;
+    animation-delay: .14s;
+}
+#first-v {
+    animation: letter-fade-in 3.6s ease-in;
+    animation-delay: .16s;
+}
+#second-e {
+    animation: letter-fade-in 3.8s ease-in;
+    animation-delay: .18s;
+}
+#third-l {
+    animation: letter-fade-in 4s ease-in;
+    animation-delay: .20s;
+}
+#fourth-l {
+    animation: letter-fade-in 4.2s ease-in;
+    animation-delay: .22s;
+}
+#third-e {
+    animation: letter-fade-in 4.4s ease-in;
+    animation-delay: .24s;
+}
+#second-r {
+    animation: letter-fade-in 4.6s ease-in;
+    animation-delay: .26s;
+}
 
 
 /*//////////////////////*/
