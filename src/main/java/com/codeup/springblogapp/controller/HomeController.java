@@ -13,7 +13,7 @@ public class HomeController {
 //        return "the landing page";
 //    }
 
-    @GetMapping("/home")
+    @GetMapping("")
     public String homePage(){
         return "home";
     }
