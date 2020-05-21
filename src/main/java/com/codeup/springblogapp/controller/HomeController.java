@@ -17,4 +17,11 @@ public class HomeController {
     public String homePage(){
         return "home";
     }
+
+    @GetMapping("")
+    public String redirectHome(){
+        return "home";
+    }
+
+
 }
