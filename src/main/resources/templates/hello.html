@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <!--above must be included as attribute in order to use Thymeleaf-->
+<title>Hello</title>
 <head th:replace="partials/partials :: head"></head>
 
 <body>
-<nav th:replace="partials/partials :: navbar"></nav>
+<nav th:replace="partials/partials :: navbar">
+</nav>
 <!--above is fragment which will replace content its in with above navbar partial section-->
 
 
