@@ -4,7 +4,9 @@ This is a brief explanation of this repo and projects within - it is titled code
 as Codeup is the bootcamp (full-stack web development) I underwent to learn Spring (along with other
 languages/technologies). This particular project is the Fortuna Spring Blog. Fortuna is the name of
 my Codeup cohort, and this application is intended to serve as a site for CRUD-enabled posts built with
-Spring and Thymeleaf via MVC design. 
+Spring and Thymeleaf via MVC design. It was run through Spring Boot and contained in Maven during
+development, and a user just has to create a profile before manipulating posts. The live version
+is https://springblog.sinisatesic.com/. 
  
 The consistent navbar you see with available options is a partial - below is its code:
  
