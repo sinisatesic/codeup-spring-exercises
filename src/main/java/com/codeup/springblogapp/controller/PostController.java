@@ -1,6 +1,4 @@
 package com.codeup.springblogapp.controller;
-
-
 import com.codeup.springblogapp.model.Post;
 import com.codeup.springblogapp.model.User;
 import com.codeup.springblogapp.repositories.PostRepository;
@@ -14,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class PostController {
-
 
 
     //********* DEPENDENCY INJECTION ***********
@@ -63,7 +60,6 @@ public class PostController {
 
 
 
-
     //********* SHOW SINGLE POST ***********
 
     //view individual post with id
@@ -100,7 +96,6 @@ public class PostController {
         return "redirect:/posts";
     }
     //***********************************
-
 
 
 
