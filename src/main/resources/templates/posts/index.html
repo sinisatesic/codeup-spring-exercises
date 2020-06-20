@@ -13,19 +13,12 @@
 <div class="container">
     <!--    same as view in jsp-->
     <h2 class="template-h2">Check out these fresh posts</h2>
-<!--    <div th:each="post : ${posts}">-->
-<!--        <a href=""></a><p style="font-weight: bold;" th:text="${post.title}"></p>-->
-<!--        <p style="padding-left: 2rem;" th:text="${post.body}"></p>-->
-<!--        <button type="submit"><a href="posts/show">View Post</a></button>-->
-<!--&lt;!&ndash;        need th ref - need to tell which post to see&ndash;&gt;-->
-<!--    </div>-->
+
     <div class="post-div mb-3" th:each="post : ${posts}">
-<!--        <a th:href="@{|/posts/${post.getId()}|}"><h2 th:text="${post.title}" /></a>-->
         <h2 th:text="${post.title}" class="post-title"></h2>
         <p th:text="${post.body}"></p>
         <a th:href="@{|/posts/delete/${post.getId()}|}" class="delete-link"><p style="padding-left: 2rem;" class="delete-button">DELETE</p></a>
         <a th:href="@{|/posts/edit/${post.getId()}|}" class="edit-link"><p style="padding-left: 2rem;" class="edit-button">EDIT</p></a>
-<!--        <a th:href="@{|/posts/${post.id}|}" class="edit-link"><p style="padding-left: 2rem;">Read more...</p></a>-->
     </div>
 </div>
 

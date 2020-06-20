@@ -9,12 +9,11 @@
 </nav>
 <!--above is fragment which will replace content its in with above navbar partial section-->
 
-
     <h1 style="text-align: center">Hello, <span th:text="${name}">World</span>!</h1>
     <br>
     <h2 style="text-align: center">Replace "fortuna" in the URL if you'd like a personal greeting.</h2>
-<!--Thymeleaf also allows us to use placeholder data in our templates, that is what the "World" inside of the <span> tag is.
- This allows us to open the template in our browser directly and make changes to the HTML, CSS, and JavaScript rapidly, without the need to have (or continuously restart) an entire application server running.-->
+<!--Thymeleaf also allows placeholder data in templates, that is what the "World" inside of the <span> tag is.
+ This allows one to open the template in our browser directly and make changes to the HTML, CSS, and JavaScript rapidly, without the need to have (or continuously restart) an entire application server running.-->
 <!--    if just /hello is provided in url, it will result in "Hello, !"-->
 <standard_scripts th:replace="partials/partials :: footer"></standard_scripts>
 </body>

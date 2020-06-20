@@ -3,11 +3,8 @@
 <head>
 
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<!--    stylesheet information-->
     <div th:fragment="head">
         <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-<!--        <link th:href="@{/bootstrap.css}" rel="stylesheet">-->
-<!--        <link th:href="@{/style.css}" rel="stylesheet">-->
         <link th:href="@{/css/bootstrap-3.4.1-dist/css/bootstrap.css}" rel="stylesheet">
         <link th:href="@{/custom-css/custom-style.css}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Raleway&display=swap" rel="stylesheet">
@@ -19,17 +16,11 @@
 <nav th:fragment="navbar" class="navbar navbar-default">
     <!-- awesome navbar goes here -->
     <ul class="nav navbar-nav">
-<!--        move nav item class into lis-->
         <li class="nav-item"><a href="/home">Home</a> </li>
         <li class="nav-item"><a href="/hello/Fortuna">Hello</a></li>
-<!--        <li class="nav-item"><a href="/join">Join</a></li>-->
-<!--        <li class="nav-item"><a href="/welcome">Welcome</a></li>-->
         <li class="nav-item"><a href="/roll-dice">Dice Game</a></li>
-<!--        <li class="nav-item"><a href="/ads">Ads</a></li>-->
-<!--        <li class="nav-item"><a href="/ads/create">Create Ad</a></li>-->
         <li class="nav-item"><a href="/posts">Posts</a></li>
         <li class="nav-item"><a href="/posts/create">Create Post</a></li>
-<!--        <li class="nav-item"><a href="/books">Books</a></li>-->
         <li class="nav-item">
         <li class="nav-item">
             <form th:action="@{/login}" th:method="post">
@@ -43,7 +34,6 @@
         </li>
         <li class="nav-item">
             <a href="/register">
-<!--                class=btn in bootstrap-->
                 <button class="nav-link register-button">Register</button>
             </a>
         </li>

@@ -13,11 +13,9 @@
 
 <div class="container">
     <h2>Individual Post:</h2>
-
     <p style="font-weight: bold;" th:text="${post.title}"></p>
     <p style="padding-left: 2rem;" th:text="${post.body}"></p>
     <p style="padding-left: 2rem;" th:text="${post.getUser().getEmail()}"></p>
-
 </div>
 
 <standard_scripts th:replace="partials/partials :: footer">
