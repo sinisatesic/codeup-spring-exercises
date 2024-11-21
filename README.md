@@ -206,9 +206,6 @@ public class RollDiceController {
 }
 ```
 
-I loved making this project, and it was the first of what will be many. If you have any questions,
-or wish to ever collaborate on any project, please feel free to get in contact: sinisa.tesic210@gmail.com
-
 
 
 
